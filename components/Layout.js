@@ -61,6 +61,11 @@ export default function Layout(props) {
             ))}
           </ul>
         </div>
+        <div className="absolute flex items-center border-b border-t border-teal-500 py-2 px-4 bottom-0 w-64">
+            <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+                Cancel
+            </button>
+        </div>
       </nav>
 
       {/* Messages */}
