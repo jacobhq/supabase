@@ -1,28 +1,38 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const MessageInput = ({ onSubmit }) => {
-  const [messageText, setMessageText] = useState('')
+  const [messageText, setMessageText] = useState("");
 
   const submitOnEnter = (event) => {
     // Watch for enter key
     if (event.keyCode === 13) {
-      onSubmit(messageText)
-      setMessageText('')
+      onSubmit(messageText);
+      setMessageText("");
     }
+  };
+
+  const sendMsg = () => {
+      onSubmit(messageText);
+      setMessageText("")
   }
 
   return (
     <>
-      <input
-        className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="text"
-        placeholder="Send a message"
-        value={messageText}
-        onChange={(e) => setMessageText(e.target.value)}
-        onKeyDown={(e) => submitOnEnter(e)}
-      />
+      <div className="flex items-center border-b border-t border-teal-500 py-2 px-4">
+        <input
+          className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+          type="text"
+          placeholder="Send a message"
+          value={messageText}
+          onChange={(e) => setMessageText(e.target.value)}
+          onKeyDown={(e) => submitOnEnter(e)}
+        />
+        <button onClick={sendMsg} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+          Send
+        </button>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default MessageInput
+export default MessageInput;
