@@ -34,8 +34,8 @@ const Home = () => {
             <label className="font-bold text-grey-darker block mb-2">Email</label>
             <input
               type="text"
-              className="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
-              placeholder="Your Username"
+              className="shadow-none bg-white focus:outline-none focus:shadow-outline focus:border-blue-600 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              placeholder="Enter your email"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -44,8 +44,8 @@ const Home = () => {
             <label className="font-bold text-grey-darker block mb-2">Password</label>
             <input
               type="password"
-              className="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
-              placeholder="Your password"
+              className="bg-white focus:outline-none focus:shadow-outline focus:border-blue-600 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              placeholder="Enter something strong"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -58,7 +58,7 @@ const Home = () => {
                 handleLogin('SIGNUP', username, password)
               }}
               href={'/channels'}
-              className="bg-indigo-700 hover:bg-teal text-white py-2 px-4 rounded text-center transition duration-150 hover:bg-indigo-600 hover:text-white"
+              className="bg-indigo-700 hover:bg-teal text-white py-2 px-4 rounded-lg text-center transition duration-150 hover:bg-indigo-600 hover:text-white"
             >
               Sign up
             </a>
@@ -68,7 +68,7 @@ const Home = () => {
                 handleLogin('LOGIN', username, password)
               }}
               href={'/channels'}
-              className="border border-indigo-700 text-indigo-700 py-2 px-4 rounded w-full text-center transition duration-150 hover:bg-indigo-700 hover:text-white"
+              className="border border-indigo-700 text-indigo-700 py-2 px-4 rounded-lg w-full text-center transition duration-150 hover:bg-indigo-700 hover:text-white"
             >
               Login
             </a>

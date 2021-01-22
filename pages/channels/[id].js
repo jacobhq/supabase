@@ -34,7 +34,7 @@ const ChannelsPage = (props) => {
             <div ref={messagesEndRef} style={{ height: 0 }} />
           </div>
         </div>
-        <div className="p-2 absolute bottom-0 left-0 w-full">
+        <div className="absolute bottom-0 left-0 w-full">
           <MessageInput onSubmit={async (text) => addMessage(text, channelId, user.id)} />
         </div>
       </div>
