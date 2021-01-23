@@ -1,4 +1,5 @@
 import { useState } from "react";
+import  { getId } from '../lib/Store';
 
 const MessageInput = ({ onSubmit }) => {
   const [messageText, setMessageText] = useState("");
@@ -6,14 +7,18 @@ const MessageInput = ({ onSubmit }) => {
   const submitOnEnter = (event) => {
     // Watch for enter key
     if (event.keyCode === 13) {
-      onSubmit(messageText);
-      setMessageText("");
+      if (messageText != "") {
+          onSubmit(messageText);
+          setMessageText("");
+      }
     }
   };
 
   const sendMsg = () => {
-      onSubmit(messageText);
-      setMessageText("")
+      if (messageText != "") {
+          onSubmit(messageText);
+          setMessageText("");
+      }
   }
 
   return (
