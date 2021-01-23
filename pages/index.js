@@ -34,7 +34,7 @@ const Home = () => {
             <label className="font-bold text-grey-darker block mb-2">Email</label>
             <input
               type="text"
-              className="shadow-none bg-white focus:outline-none focus:shadow-outline focus:border-blue-600 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              className="shadow-none bg-white focus:outline-none focus:ring focus:border-indigo-600 focus:ring-indigo-300 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               placeholder="Enter your email"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -44,7 +44,7 @@ const Home = () => {
             <label className="font-bold text-grey-darker block mb-2">Password</label>
             <input
               type="password"
-              className="bg-white focus:outline-none focus:shadow-outline focus:border-blue-600 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              className="bg-white focus:outline-none focus:ring focus:ring-indigo-300 focus:border-indigo-600 border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               placeholder="Enter something strong"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
