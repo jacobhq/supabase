@@ -26,16 +26,16 @@ export default function Layout(props) {
 
   return (
     <main className="main flex h-screen w-screen overflow-hidden">
-        <div className="h-full w-full fixed z-50 bg-teal-500 flex justify-center items-center md:hidden lg:hidden xl:hidden 2xl:hidden">
+        <div className="h-full w-full fixed z-50 bg-indigo-500 flex justify-center items-center md:hidden lg:hidden xl:hidden 2xl:hidden">
             <h1 className="text-3xl text-white p-5 text-center">Mobile site on the way</h1>
         </div>
       {/* Sidebar */}
       <nav
         className="w-64 bg-gray-900 text-gray-100 overflow overflow-scroll overflow-x-hidden"
       >
-          <div className="absolute bottom-0 flex items-center border-b border-t border-teal-500 py-2 px-4">
+          <div className="absolute bottom-0 flex items-center border-b border-t border-indigo-500 py-2 px-4">
             <button
-            className="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-indigo-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => newChannel()}
           >
@@ -57,7 +57,7 @@ export default function Layout(props) {
             <span className="hidden sm:block md:block lg:block 2xl:block">New channel</span>
           </button>
           <button
-            className="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-indigo-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => signOut()}
           >

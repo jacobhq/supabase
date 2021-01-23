@@ -18,7 +18,7 @@ const MessageInput = ({ onSubmit }) => {
 
   return (
     <>
-      <div className="flex items-center border-b border-t border-teal-500 py-2 px-4">
+      <div className="flex items-center border-b border-t border-indigo-500 py-2 px-4">
         <input
           className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
           type="text"
@@ -27,7 +27,7 @@ const MessageInput = ({ onSubmit }) => {
           onChange={(e) => setMessageText(e.target.value)}
           onKeyDown={(e) => submitOnEnter(e)}
         />
-        <button onClick={sendMsg} className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        <button onClick={sendMsg} className="flex-shrink-0 bg-indigo-500 hover:bg-indigo-700 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
           Send
         </button>
       </div>

@@ -45,3 +45,12 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #2c7a7b; 
 }
+#msg:hover #toolbar {
+    display: block;
+}
+
+#toolbar {
+    display: none;
+    position: absolute;
+    right: 10%;
+}
