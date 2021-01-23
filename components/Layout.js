@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import UserContext from "~/lib/UserContext";
 import { addChannel } from "~/lib/Store";
+import simplebar from 'simplebar';
 
 export default function Layout(props) {
   const { signOut } = useContext(UserContext);
@@ -26,44 +27,16 @@ export default function Layout(props) {
 
   return (
     <main className="main flex h-screen w-screen overflow-hidden">
+        <div className="h-full w-full fixed z-50 bg-teal-500 flex justify-center items-center md:hidden lg:hidden xl:hidden 2xl:hidden">
+            <h1 className="text-3xl text-white p-5 text-center">Mobile site on the way</h1>
+        </div>
       {/* Sidebar */}
       <nav
-        className="w-64 bg-gray-900 text-gray-100 overflow-scroll "
-        style={{ maxWidth: "20%", minWidth: 150, maxHeight: "100vh" }}
+        className="w-64 bg-gray-900 text-gray-100 overflow overflow-scroll overflow-x-hidden"
       >
-        <div className="p-2 ">
-          <div className="p-2">
+          <div className="absolute bottom-0 flex items-center border-b border-t border-teal-500 py-2 px-4">
             <button
-              className="bg-blue-900 hover:bg-blue-800 text-white py-2 px-4 rounded w-full transition duration-150"
-              onClick={() => newChannel()}
-            >
-              New Channel
-            </button>
-          </div>
-          <hr className="m-2" />
-          <div className="p-2">
-            <button
-              className="bg-blue-900 hover:bg-blue-800 text-white py-2 px-4 rounded w-full transition duration-150"
-              onClick={() => signOut()}
-            >
-              Log out
-            </button>
-          </div>
-          <hr className="m-2" />
-          <h4 className="font-bold">Channels</h4>
-          <ul className="channel-list">
-            {props.channels.map((x) => (
-              <SidebarItem
-                channel={x}
-                key={x.id}
-                isActiveChannel={x.id === props.activeChannelId}
-              />
-            ))}
-          </ul>
-        </div>
-        <div className="absolute flex items-center border-b border-t border-teal-500 py-2 px-4 bottom-0 w-64">
-            <button
-            class="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => newChannel()}
           >
@@ -82,10 +55,10 @@ export default function Layout(props) {
         clipRule="evenodd"
       ></path>
     </svg>
-            New channel
+            <span className="hidden sm:block md:block lg:block 2xl:block">New channel</span>
           </button>
           <button
-            class="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-teal-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => signOut()}
           >
@@ -102,10 +75,22 @@ export default function Layout(props) {
                 d="M2.25 2.25A.75.75 0 001.5 3v9A.75.75 0 103 12V3a.75.75 0 00-.75-.75zm7.72 6.97a.75.75 0 001.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25a.749.749 0 10-1.06 1.06l.97.97H5.25a.75.75 0 000 1.5h5.69l-.97.97z"
               ></path>
             </svg>
-            Logout
+            <span className="hidden sm:block md:block lg:block 2xl:block">Logout</span>
           </button>
         </div>
-      </nav>
+        <div className="p-2 ">
+          <h4 className="font-bold">Channels</h4>
+          <ul className="channel-list">
+            {props.channels.map((x) => (
+              <SidebarItem
+                channel={x}
+                key={x.id}
+                isActiveChannel={x.id === props.activeChannelId}
+              />
+            ))}
+          </ul>
+        </div>
+     </nav>
 
       {/* Messages */}
       <div className="flex-1 bg-gray-800 h-screen">{props.children}</div>
