@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useContext } from "react";
 import UserContext from "~/lib/UserContext";
 import { addChannel } from "~/lib/Store";
-import simplebar from 'simplebar';
 
 export default function Layout(props) {
   const { signOut } = useContext(UserContext);
