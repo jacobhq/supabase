@@ -35,7 +35,7 @@ export default function Layout(props) {
       >
           <div className="absolute bottom-0 flex items-center border-b border-t border-indigo-500 py-2 px-4">
             <button
-            className="flex items-center flex-shrink-0 border-transparent border-4 text-indigo-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-white hover:text-indigo-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => newChannel()}
           >
@@ -48,7 +48,7 @@ export default function Layout(props) {
       className="mr-1"
     >
       <path
-        fill="#38B2AC"
+        fill="#6366F0"
         fillRule="evenodd"
         d="M7.5 13.5a6 6 0 100-12 6 6 0 000 12zm.75-8.25a.75.75 0 00-1.5 0v1.5h-1.5a.75.75 0 000 1.5h1.5v1.5a.75.75 0 101.5 0v-1.5h1.5a.75.75 0 100-1.5h-1.5v-1.5z"
         clipRule="evenodd"
@@ -57,7 +57,7 @@ export default function Layout(props) {
             <span className="hidden sm:block md:block lg:block 2xl:block">New channel</span>
           </button>
           <button
-            className="flex items-center flex-shrink-0 border-transparent border-4 text-indigo-500 text-sm py-1 px-2 rounded"
+            className="flex items-center flex-shrink-0 border-transparent border-4 text-white hover:text-indigo-500 text-sm py-1 px-2 rounded"
             type="button"
             onClick={() => signOut()}
           >
@@ -70,7 +70,7 @@ export default function Layout(props) {
               className="mr-1"
             >
               <path
-                fill="#38b2ac"
+                fill="#6366F0"
                 d="M2.25 2.25A.75.75 0 001.5 3v9A.75.75 0 103 12V3a.75.75 0 00-.75-.75zm7.72 6.97a.75.75 0 001.06 1.06l2.25-2.25a.75.75 0 000-1.06l-2.25-2.25a.749.749 0 10-1.06 1.06l.97.97H5.25a.75.75 0 000 1.5h5.69l-.97.97z"
               ></path>
             </svg>
